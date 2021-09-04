@@ -97,8 +97,6 @@ serviceMaps:
           - jsonPath: $.MarriageRegistrations.*.coupleDetails.*.fatherName
           
           - jsonPath: $.MarriageRegistrations.*.coupleDetails.*.motherName
-          
-          - jsonPath: $.MarriageRegistrations[*][?({id} in @.coupleDetails[*].id)].marriagePlace.id
 
           - jsonPath: $.MarriageRegistrations[*][?({id} in @.coupleDetails[*].id)].auditDetails.createdBy
 
@@ -193,8 +191,6 @@ serviceMaps:
           - jsonPath: $.MarriageRegistrations.*.coupleDetails.*.fatherName
           
           - jsonPath: $.MarriageRegistrations.*.coupleDetails.*.motherName
-          
-          - jsonPath: $.MarriageRegistrations[*][?({id} in @.coupleDetails[*].id)].marriagePlace.id
 
           - jsonPath: $.MarriageRegistrations[*][?({id} in @.coupleDetails[*].id)].auditDetails.createdBy
 

@@ -37,6 +37,10 @@ serviceMaps:
           - jsonPath: $.MarriageRegistrations.*.auditDetails.createdTime
 
           - jsonPath: $.MarriageRegistrations.*.auditDetails.lastModifiedTime
+          
+          - jsonPath: $.Licenses.*.businessService
+
+          - jsonPath: $.Licenses.*.workflowCode
 
 
 

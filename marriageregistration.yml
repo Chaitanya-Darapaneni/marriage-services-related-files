@@ -38,9 +38,9 @@ serviceMaps:
 
           - jsonPath: $.MarriageRegistrations.*.auditDetails.lastModifiedTime
           
-          - jsonPath: $.Licenses.*.businessService
+          - jsonPath: $.MarriageRegistrations.*.businessService
 
-          - jsonPath: $.Licenses.*.workflowCode
+          - jsonPath: $.MarriageRegistrations.*.workflowCode
 
 
 
@@ -121,7 +121,7 @@ serviceMaps:
 
 
 
-       - query: UPDATE public.eg_mr_application SET accountid=?,  mrnumber=? , marriagedate=?, issueddate=?, action=?, status=?, lastmodifiedby=?,  lastmodifiedtime=? WHERE id = ?;
+       - query: UPDATE public.eg_mr_application SET accountid=?,  mrnumber=? , marriagedate=?, issueddate=?, action=?, status=?, lastmodifiedby=?,  lastmodifiedtime=? ,businessservice = ?, workflowcode = ? WHERE id = ?;
          basePath: MarriageRegistrations.*
          jsonMaps:
           - jsonPath: $.MarriageRegistrations.*.accountId
@@ -139,6 +139,10 @@ serviceMaps:
           - jsonPath: $.MarriageRegistrations.*.auditDetails.lastModifiedBy
 
           - jsonPath: $.MarriageRegistrations.*.auditDetails.lastModifiedTime
+          
+          - jsonPath: $.MarriageRegistrations.*.businessService
+      
+          - jsonPath: $.MarriageRegistrations.*.workflowCode
 
           - jsonPath: $.MarriageRegistrations.*.id
 

@@ -172,7 +172,7 @@ serviceMaps:
 
           - jsonPath: $.MarriageRegistrations.*.coupleDetails.*.tenantId
 
-          - jsonPath: $.MarriageRegistrations.*.id
+          - jsonPath: $.MarriageRegistrations.[*][?({id} in @.coupleDetails[*].id)].id
 
           - jsonPath: $.MarriageRegistrations.*.coupleDetails.*.isDivyang
 
@@ -360,7 +360,7 @@ serviceMaps:
 
           - jsonPath: $.MarriageRegistrations.*.witness*.tenantId
 
-          - jsonPath: $.MarriageRegistrations.*.id
+          - jsonPath: $.MarriageRegistrations[*][?({id} in @.witness[*].id)].id
 
           - jsonPath: $.MarriageRegistrations.*.witness*.title
 

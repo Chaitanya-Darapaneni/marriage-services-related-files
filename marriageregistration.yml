@@ -78,7 +78,7 @@ serviceMaps:
 
           - jsonPath: $.MarriageRegistrations.*.coupleDetails.*.tenantId
 
-          - jsonPath: $.MarriageRegistrations.*.id
+          - jsonPath: $.MarriageRegistrations.[*][?({id} in @.coupleDetails[*].id)].id
 
           - jsonPath: $.MarriageRegistrations.*.coupleDetails.*.isDivyang
 

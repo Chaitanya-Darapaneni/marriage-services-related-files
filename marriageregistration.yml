@@ -222,7 +222,7 @@ serviceMaps:
 
           - jsonPath: $.MarriageRegistrations[*][?({id} in @.coupleDetails[*].id)].auditDetails.lastModifiedTime
 
-       - query: INSERT INTO INSERT INTO eg_mr_coupleaddress(id, tenantid, mr_couple_id, addressline1, addressline2, addressline3, country, state, district, pincode, locality, createdby,  lastmodifiedby ,createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET addressline1 = ?, addressline2 = ?, addressline3 = ?, country = ?, state= ?, district = ? , pincode = ? , locality = ?,  lastmodifiedby =? , lastmodifiedtime = ?;
+       - query: INSERT INTO eg_mr_coupleaddress(id, tenantid, mr_couple_id, addressline1, addressline2, addressline3, country, state, district, pincode, locality, createdby,  lastmodifiedby ,createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET addressline1 = ?, addressline2 = ?, addressline3 = ?, country = ?, state= ?, district = ? , pincode = ? , locality = ?,  lastmodifiedby =? , lastmodifiedtime = ?;
          basePath: MarriageRegistrations.*.coupleDetails.*
          jsonMaps:
           - jsonPath: $.MarriageRegistrations.*.coupleDetails.*.coupleAddress.id

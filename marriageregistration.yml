@@ -354,7 +354,7 @@ serviceMaps:
 
 
        - query: INSERT INTO public.eg_mr_witness( id, tenantid, mr_id, title, address, firstname, middlename, lastname, country, state, district, pincode, contact, createdby, createdtime, lastmodifiedby, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET title = ?, address = ?, firstname = ?, middlename = ?, lastname = ?, country = ?, state = ?, district = ?, pincode = ? , contact = ? , lastmodifiedby =?, lastmodifiedtime =?;
-         basePath: MarriageRegistrations.*.witness*
+         basePath: MarriageRegistrations.*.witness.*
          jsonMaps:
           - jsonPath: $.MarriageRegistrations.*.witness*.id
 

@@ -18,13 +18,13 @@ serviceMaps:
 
           - jsonPath: $.MarriageRegistrations.*.mrNumber
 
-          - jsonPath: $.MarriageRegistrations.*.applicationnumber
+          - jsonPath: $.MarriageRegistrations.*.applicationNumber
 
-          - jsonPath: $.MarriageRegistrations.*.applicationdate
+          - jsonPath: $.MarriageRegistrations.*.applicationDate
 
-          - jsonPath: $.MarriageRegistrations.*.marriagedate
+          - jsonPath: $.MarriageRegistrations.*.marriageDate
 
-          - jsonPath: $.MarriageRegistrations.*.issueddate
+          - jsonPath: $.MarriageRegistrations.*.issuedDate
 
           - jsonPath: $.MarriageRegistrations.*.action
 

@@ -145,7 +145,7 @@ serviceMaps:
           - jsonPath: $.MarriageRegistrations.*.id
 
 
-       - query: UPDATE public.eg_mr_marriageplace SET  ward=?, placeofmarriage=?, locality=?, additionaldetail=?,  lastmodifiedby=?,  lastmodifiedtime=? WHERE WHERE id = ?;
+       - query: UPDATE public.eg_mr_marriageplace SET  ward=?, placeofmarriage=?, locality=?, additionaldetail=?,  lastmodifiedby=?,  lastmodifiedtime=? WHERE  id = ?;
          basePath: MarriageRegistrations.*.marriagePlace
          jsonMaps:
           - jsonPath: $.MarriageRegistrations.*.marriagePlace.ward

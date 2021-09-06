@@ -1,5 +1,5 @@
 serviceMaps:
- serviceName: tl-services
+ serviceName: mr-services
  mappings:
  - version: 1.0
    description: Persists marriageRegistartion details in eg_mr_application  table
@@ -453,7 +453,7 @@ serviceMaps:
 
  - version: 1.0
    description: Persists marraige registration details in eg_mr_application  table
-   fromTopic: update-tl-workflow
+   fromTopic: update-mr-workflow
    isTransaction: true
    queryMaps:
 
@@ -510,7 +510,7 @@ serviceMaps:
           - jsonPath: $.MarriageRegistrations.*.id
 
 
-       - query: UPDATE eg_tl_marriagePlace SET additionaldetail = ?,lastmodifiedby = ?,  lastmodifiedtime = ? WHERE id = ?;
+       - query: UPDATE eg_mr_marriagePlace SET additionaldetail = ?,lastmodifiedby = ?,  lastmodifiedtime = ? WHERE id = ?;
          basePath: MarriageRegistrations.*.marriagePlace
          jsonMaps:
           - jsonPath: $.MarriageRegistrations.*.marriagePlace.additionalDetail

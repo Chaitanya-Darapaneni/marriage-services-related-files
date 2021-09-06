@@ -458,7 +458,7 @@ serviceMaps:
    queryMaps:
 
 
-       - query: INSERT INTO eg_mr_verificationDocument( id, tenantid, active, documenttype, filestoreid, mr_id, active , createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET active = ?, documenttype =?, filestoreid =?,lastmodifiedby =?, lastmodifiedtime =?;
+       - query: INSERT INTO eg_mr_verificationDocument( id, tenantid, active, documenttype, filestoreid, mr_id, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET active = ?, documenttype =?, filestoreid =?,lastmodifiedby =?, lastmodifiedtime =?;
          basePath: MarriageRegistrations.*.verificationDocuments.*
          jsonMaps:
           - jsonPath: $.MarriageRegistrations.*.verificationDocuments.*.id

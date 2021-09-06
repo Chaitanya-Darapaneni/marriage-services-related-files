@@ -416,7 +416,7 @@ serviceMaps:
 
 
 
-       - query: INSERT INTO eg_mr_applicationdocument( id, tenantid, active, documenttype, filestoreid, mr_id, active , createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET active = ?, documenttype =?, filestoreid =?,lastmodifiedby =?, lastmodifiedtime =?;
+       - query: INSERT INTO eg_mr_applicationdocument( id, tenantid, active, documenttype, filestoreid, mr_id , createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET active = ?, documenttype =?, filestoreid =?,lastmodifiedby =?, lastmodifiedtime =?;
          basePath: MarriageRegistrations.*.applicationDocuments.*
          jsonMaps:
           - jsonPath: $.MarriageRegistrations.*.applicationDocuments.*.id
@@ -522,4 +522,3 @@ serviceMaps:
           - jsonPath: $.MarriageRegistrations.*.auditDetails.lastModifiedTime
 
           - jsonPath: $.MarriageRegistrations.*.marriagePlace.id
-
